@@ -5,7 +5,7 @@ import sqlite3
 app = FastAPI()
 
 # Création de la base de données SQLite
-conn = sqlite3.connect("memory.db", check_same_thread=False)
+conn = sqlite3.connect("/mnt/data/memory.db", check_same_thread=False)
 cursor = conn.cursor()
 cursor.execute("""
     CREATE TABLE IF NOT EXISTS memory (
